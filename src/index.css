@@ -1,0 +1,125 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+}
+
+.container {
+  max-width: 72rem;
+  width: 72rem;
+  background-color: lightblue;
+  padding: 1rem;
+}
+
+.container header {
+  font-size: 2.2rem;
+}
+
+.container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  margin: 1em 0;
+}
+
+form .input-container {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-container .label {
+  position: absolute;
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+  z-index: 1;
+  left: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-container input {
+  width: 100%;
+  height: 100% !important;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  border: none;
+  background-color: lightblue;
+  border-bottom: 3px solid black;
+  border-radius: 3px;
+  transition: border 0.3s ease-in-out;
+}
+
+input:focus ~ .label,
+input:not(:placeholder-shown) ~ .label {
+  margin-top: -13px;
+  padding: 0 0.2rem;
+  background-color: lightblue;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+  outline: none;
+  border: 3px solid black;
+}
+
+form .addContact {
+  font-size: 1.2rem;
+  padding: 1rem 1.2rem;
+  align-self: flex-end;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.list-contact ul {
+  display: grid;
+  place-items: center;
+  gap: 1.4rem;
+  overflow: hidden;
+}
+
+.list-contact ul li {
+  list-style: none;
+  background-color: blueviolet;
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.list-contact ul li div {
+  display: flex;
+  height: 100px;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-contact ul li div div {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 0.5rem;
+}
+
+.deleteContact {
+  background-color: red;
+  color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
